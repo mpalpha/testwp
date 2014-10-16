@@ -1,0 +1,15 @@
+.perfect-resume {
+    height: 700px;
+    width: 100%;
+
+    &__img {
+        background: url('images/ball_of_paper.png') no-repeat;
+        background-position: center;
+        height: 558px;
+        padding: 0;
+        position: absolute;
+        right: -140px;
+        top: -80px;
+        width: 628px;
+	}
+}

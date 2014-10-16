@@ -1,0 +1,29 @@
+.top-banner {
+    @include position(relative, null null null null);
+
+    background: url('images/top-banner.jpg') center center no-repeat;
+    background-size: cover;
+    color: #fff;
+    height: 700px;
+    text-align: center;
+    width: 100%;
+
+    &__container {
+        margin-top: 130px;
+    }
+
+    &__icon {
+        @include position(absolute, null null 30px 50%);
+
+        background: url('images/sprites.png') no-repeat;
+        background-position: 0 -42px;
+        height: 38px;
+        width: 38px;
+
+        &:hover {
+            background-position: 0 -80px;
+            height: 37px;
+            width: 37px;
+        }
+    }
+}

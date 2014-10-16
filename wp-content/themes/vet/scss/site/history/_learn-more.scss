@@ -1,0 +1,45 @@
+.learn-more {
+
+	margin-bottom: -200px;
+
+	&__social-container {
+		padding: 0 0 0 21px;
+	}
+
+	&__social {		
+		height: 240px;
+		list-style: none;
+		margin: 0;
+		width: 61px;
+		
+		&__item {
+			@include transform(translateY(-200px));
+
+			background: url('fonts/socialico/Socialico.svg') no-repeat;
+			background-color: rgb(66,76,77);
+			background-size: 60px 60px;
+			height: 60px;
+
+			&:hover {
+				background: url('images/social-facebook-hover.png') no-repeat center;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&__text-container {
+		@include transform(translateY(-200px));
+
+		background-color: #fff;
+		box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+
+		> div {
+			padding: 50px 0 0 40px;
+		}
+
+		span {
+			color: $primary-color;
+		}
+	}
+}
+

@@ -1,0 +1,15 @@
+.top-banner-employer {	
+	@include position(relative, null null null null);
+
+	background: url('images/top-banner_perfect-candidate.jpg') no-repeat;
+	background-size: cover;
+	height: 700px;
+
+	h1 {
+		margin-top: 130px;
+	}
+
+	span {
+		color: $primary-color;
+	}
+}

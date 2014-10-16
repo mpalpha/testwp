@@ -1,0 +1,47 @@
+<div class="fixed off-canvas-fixed">
+    <nav class="tab-bar show-for-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#">
+            <span class="menu-logo"></span>
+        </a>
+    </nav>
+    <aside class="left-off-canvas-menu">
+        <div class="xpto">
+            <ul class="off-canvas-list">
+                <li><label class="title">Menu</label></li>
+            </ul>
+
+            <ul class="off-canvas-list mobile-menu">
+                {% for item in nav.items %}
+                <li>
+                    {% if item.has_child_class %}
+                    <dl class="accordion accordion--arrows accordion--off-canvas" data-accordion>
+                        <dd class="accordion-navigation">
+                            <a href="#drop-panel{{loop.index}}">{{item.title}}</a>
+                            <div id="drop-panel{{loop.index}}" class="content">
+                                <ul>
+                                    {% for children in item.children %}
+                                    <li>
+                                        <a href="{{children.link}}">{{children.title}}</a>
+                                    </li>
+                                    {% if children.has_child_class %}
+                                    {% for submenu in children.children %}
+                                    <li>
+                                        <a href="{{submenu.link}}">{{submenu.title}}</a>
+                                    </li>
+                                    {% endfor %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                    {% else %}
+                    <a href="{{item.link}}" class="">{{item.title}}</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </aside>
+</div>
+

@@ -1,0 +1,15 @@
+.get-connected {
+    height: 700px;
+    width: 100%;
+
+    &__img {
+        background: url('images/get_connected.png') no-repeat;
+        background-position: center;
+        height: 358px;
+        padding: 0;
+        position: absolute;
+        right: -120px;
+        top: 0px;
+        width: 628px;
+	}
+}

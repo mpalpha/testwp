@@ -1,0 +1,29 @@
+.keys-to-being-iinview {
+
+	h2 {
+		margin-top: 70px;
+		text-align: center;
+	}
+
+	h3 {
+		color: $primary-color;
+		text-align: center;
+	}
+
+	span {
+		color: $primary-color;
+	}
+
+	li {
+		background-color: #f9f9f9;
+		border-radius: 4px/3px;
+		box-shadow: 0 5px 5px rgba(0,0,0,.15);
+		margin: 30px 0px 45px 20px;
+		padding: 150px 30px 50px 30px;
+		width: 300px;
+
+		&:first-child {
+			background-color: #fff;
+		}
+	}
+}

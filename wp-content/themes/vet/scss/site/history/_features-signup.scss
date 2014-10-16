@@ -1,0 +1,25 @@
+.features-signup {
+	@include transform(translateY(-200px));
+
+	margin-top: 40px;
+	padding-bottom: 50px;
+	
+	&__text-wrapper {
+
+		&:first-child {
+			background-color: #bbb;
+		}
+		&:last-child {
+			background-color: $primary-color;
+		} 
+		height: 180px;	
+	}
+
+	&__text-container {		
+		left: 50%;
+		position: absolute;
+		text-align: center;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	} 
+}

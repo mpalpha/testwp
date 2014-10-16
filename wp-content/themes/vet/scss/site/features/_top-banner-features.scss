@@ -1,0 +1,11 @@
+.top-banner-features {
+	@include position(relative, null null null null);
+	
+	background: url('images/top_banner_features.jpg') no-repeat;
+	background-size: cover;
+	height: 700px;
+
+	h1 {
+		margin-top: 230px;
+	}
+}

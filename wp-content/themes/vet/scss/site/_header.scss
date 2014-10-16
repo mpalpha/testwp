@@ -1,0 +1,133 @@
+.top-bar {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .15);
+    padding: 0 25px;
+
+    .title-area {
+        line-height: 60px;
+
+        h1 {
+            @include size(90px 29px);
+
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+    }
+
+    &__logo {
+        background: url('../assets/img/images/logo.png') no-repeat;
+        height: 100%;
+    }
+
+    &__user {
+        line-height: 60px;
+
+        .button {
+            top: 0;
+        }
+
+        li {
+            @include inline-block;
+
+            margin-left: 10px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            > {
+                a.top-bar__user--login {
+                    width: 86px;
+                }
+
+                a.top-bar__user--signup {
+                    width: 120px;
+                }
+            }
+
+            .top-bar-section & {
+                float: none;
+            }
+        }
+    }
+
+    .menu {
+        line-height: 60px;
+        margin-left: 50px;
+
+        > li {
+            display: inline-block;
+            float: none;
+
+            &:hover:not(.has-form) {
+                .menu__link {
+                    background: #eb5d0d;
+                    border-radius: 5px;
+                    color: #fff;
+
+                    &.open {
+                        @include border-bottom-radius(0);
+                    }
+                }
+            }
+
+            &.not-click .menu__link:hover,
+            &.not-click:hover .menu__link {
+                @include border-bottom-radius(0);
+            }
+        }
+
+        &__link {
+            color: #aaa;
+            font-family: "ProximaNova-Bold", "Helvetica", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            height: 36px;
+            line-height: 36px !important;
+
+            &:hover {
+                background: #eb5d0d !important;
+                border-radius: 5px;
+                color: #fff !important;
+            }
+
+            &--active {
+                color: $secondary-color;
+            }
+        }
+
+        .dropdown {
+            @include border-bottom-radius(5px);
+
+            background: #444;
+            padding-bottom: 13px;
+            padding-top: 10px;
+
+            li:not(.has-form) {
+                float: none;
+
+                &:hover > a:not(.button) {
+                    background-color: #666;
+                    color: #fff;
+                }
+
+                a:not(.button) {
+                    background: #444;
+                    color: #fff;
+                    font-family: "Trebuchet MS", sans-serif;
+                    font-size: 14px;
+                    line-height: 32px;
+                    padding: 0 20px;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+
+.top-bar-section {
+    .has-dropdown {
+        > a {
+            padding-right: 20px !important;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+    <footer>
+        {% do action('foundationPress_before_footer') %}
+        <div class="row">
+            <div class="large-10 large-centered small-12 columns">
+                <ul class="large-block-grid-5 small-block-grid-1">
+                    <li>
+                        <a href="{{url}}" id="iinview-logo" title="iinview">
+                            <img src="{{template_uri}}/assets/img/images/footer-logo.png" alt="{{function('get_bloginfo', 'description')}}">
+                        </a>
+                        <ul class="social">
+                            <li><a href="https://www.facebook.com" alt="_blank">F</a></li>
+                            <li><a href="https://twitter.com" target="_blank">L</a></li>
+                            <li><a href="#" class="">I</a></li>
+                            <li><a href="#" class="">+</a></li>
+                        </ul>
+                    </li>
+
+                    {% for ind, item in footer.items %}
+                    <li class="show-for-medium-up">
+                        <ul class="block-links">
+                            <li class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}} menu-item-{{item.ID}} block-links__heading">
+                                <a href="{{item.link}}">{{item.title}}</a>
+                            </li>
+                            {% if item.has_child_class %}
+                                {% for children in item.children %}
+                            <li class="menu-item menu-item-type-{{children.type}} menu-item-object-{{children.object}} menu-item-{{children.ID}} {% if ind + 1 == footer.items|length %}block-links__heading{% endif %}">
+                                <a href="{{children.link}}">{{children.title}}</a>
+                            </li>
+                                {% endfor %}
+                            {% endif %}
+                            </li>
+                        </ul>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns footer__copyright">
+                &copy; copyright 2014
+            </div>
+        </div>
+
+        {{function('dynamic_sidebar', 'footer-widgets')}}
+    </footer>
+
+    {% do action('foundationPress_layout_end') %}

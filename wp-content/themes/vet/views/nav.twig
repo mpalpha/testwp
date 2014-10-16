@@ -1,0 +1,12 @@
+{% for item in nav.items %}
+    {% set isActive = ("current-menu-item" in item.classes or "current-menu-parent" in item.classes or "current_page_ancestor" in item.classes) %}
+    <li class="{{item.class}} {% if isActive %}active{% endif %} {% if item.has_child_class %}has-dropdown{% endif %}">
+        {% if item.has_child_class and item.children[0].has_child_class %}
+        {% include 'nav-dropdown-menu.twig' %}
+        {% elseif item.has_child_class %}
+        {% include 'nav-dropdown.twig' %}
+        {% else %}
+        <a href="{{item.link}}" class="menu__link">{{item.title}}</a>
+        {% endif %}
+    </li>
+{% endfor %}

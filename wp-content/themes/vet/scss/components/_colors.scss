@@ -1,0 +1,78 @@
+$primary-color: #fd8025;
+$secondary-color: #424c4c;
+$tertiary-color: #fd8025;
+
+$first-gradient: linear-gradient(#fd8025, #eb5d0d);
+$second-gradient: linear-gradient(#5b6869, #424c4d);
+$third-gradient: linear-gradient(#fff, #eee);
+$fourth-gradient: linear-gradient(#eee, #ddd);
+
+.text,
+.link {
+    &--very-dark-grayish-cyan {
+        color: $secondary-color;
+    }
+
+    &--white {
+        color: #fff;
+
+        a {
+            color: $secondary-color;
+        }
+    }
+
+    &--orange {
+        color: $primary-color;
+    }
+}
+
+.bg {
+    &--white {
+        background: url('../assets/img/images/bg-white.png') repeat #fff;
+    }
+
+    &--orange {
+        background: url('../assets/img/images/bg-orange.png') repeat #fc8f3f;
+    }
+}
+
+.bg--orange {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+        a {
+            color: #fff;
+
+            &:hover {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+
+        &.text--white {
+            color: #fff;
+
+            a {
+                color: $secondary-color;
+            }
+        }
+
+        &.text--orange {
+            color: $primary-color;
+        }
+
+        .link {
+            &--very-dark-grayish-cyan {
+                color: $secondary-color;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+
+    }
+}

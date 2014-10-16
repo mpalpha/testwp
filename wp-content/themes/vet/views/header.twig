@@ -1,0 +1,42 @@
+<header class="header" >
+    {% block header %}
+        <div class="top-bar-container fixed show-for-medium-up">
+            <nav class="top-bar" data-topbar="" role="navigation">
+                <ul class="title-area">
+                    <li class="name">
+                        <h1><a href="{{uri}}" class="top-bar__logo"></a></h1>
+                    </li>
+                    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                </ul>
+                <section class="top-bar-section">
+                    <ul class="left menu">
+                    {% for item in nav.items %}
+                        <li class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}} menu-item-{{item.ID}} {% if item.has_child_class %}has-dropdown{% endif %}">
+                            <a href="{{item.link}}" class="menu__link">{{item.title}}</a>
+                            {% if item.has_child_class %}
+                            <ul class="dropdown">
+                                {% for children in item.children %}
+                                    <li>
+                                        <a href="{{children.link}}">{{children.title}}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                    </ul>
+
+                    <ul class="right top-bar__user">
+                    {% for item in user.items %}
+                        <li class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}} menu-item-{{item.ID}}">
+                            <a href="{{item.link}}" class="button button--small {{menuuser[item.menu_order]}}">{{item.title}}</a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </section>
+            </nav>
+        </div>
+    {% endblock %}
+</header>
+

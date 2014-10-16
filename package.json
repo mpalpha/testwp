@@ -1,0 +1,18 @@
+{
+  "name": "wordpress",
+  "version": "0.0.1",
+  "description": "wordpress local live reload",
+  "devDependencies": {
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^0.15.0",
+    "jit-grunt": "^0.8.0",
+    "load-grunt-config": "^0.13.1",
+    "time-grunt": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

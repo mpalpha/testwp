@@ -1,0 +1,13 @@
+.perfect-resume-employer {	
+	height: 700px;
+
+	span {
+		color: $primary-color;
+	}
+
+	> div {
+		&:first-child {
+			background: url('images/perfect_resume_employer.png') no-repeat left center;		
+		}
+	}
+}

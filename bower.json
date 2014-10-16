@@ -1,0 +1,36 @@
+{
+  "name": "wordpress",
+  "version": "0.0.1",
+  "private": true,
+  "authors": [
+    "Jason Lusk <Jason@jasonlusk.com>"
+  ],
+  "description": "WordPress local development environment with live reload",
+  "license": "MIT",
+  "homepage": "www.jasonlusk.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "https://github.com/mpalpha/bower-foundation.git#master",
+    "modernizr": "~2.8.3",
+    "wookmark-jquery": "~1.4.8",
+    "node-bourbon": "https://github.com/andrefgneves/node-bourbon.git#~1.0.1",
+    "select2": "~3.5.1",
+    "imagesloaded": "~3.1.8",
+    "fastclick": "~1.0.3",
+    "sticky": "*",
+    "stickem": "~1.4.1",
+    "greensock": "~1.13.2"
+  },
+  "devDependencies": {
+    "hashgrid": "*"
+  },
+  "resolutions": {
+    "jquery": ">= 2.1.0"
+  }
+}

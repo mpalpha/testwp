@@ -1,0 +1,32 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<section class="bg--orange half-background">
+    <div class="row">
+        <div class="large-12 columns">
+            <h1 class="text--white">{{post.title}}</h1>
+        </div>
+    </div>
+</section>
+<section class="bg--white">
+    <div class="row xpto">
+        <div class="large-8 columns">
+            <article class="post">
+                <div class="post__meta">
+                    Posted on <time datetime="{{post.display_date|date('Y-m-d')}}" pubdate>{{post.display_date}}</time> by <a href="{{post.author.link}}">{{post.author.name}}</a>
+                </div>
+                <section class="post__content">
+                    {{post.content}}
+                </section>
+                <div class="post__next-post">
+                    <a href="$" class="text-link">Check out the next post</a>
+
+                    {% for term in post.terms('categories') %}
+                        <li><a href="{{term.link}}">{{term.slug}}</a></li>
+                    {% endfor %}
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+{% endblock %}

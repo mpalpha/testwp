@@ -1,0 +1,60 @@
+.sign-up-now {
+    height: 700px;
+
+    &__form {
+
+        display: none;
+        padding-top: 275px;
+
+        &__input-container {
+            margin-top: 20px;
+            padding: 0 10px;
+        }
+
+        input {
+            @include placeholder { color: #fff; };
+
+            border: 1px solid #fff;
+            border-radius: 5px;
+            font-family: 'Trebuchet MS';
+            font-size: 14px;
+            height: 40px;
+            padding-left: 20px;
+
+            &:focus {
+                outline-color: #fff;
+            }
+        }
+
+        &__first-name,
+        &__last-name,
+        &__url,
+        &__password,
+        &__confirm {
+            background-color: transparent;
+            color: #fff;
+        }
+
+        &__first-name,
+        &__last-name,
+        &__password,
+        &__confirm {
+            width: 225px;
+        }
+
+        &__first-name,
+        &__password {
+            float: right;
+        }
+
+        &__url,
+        &__submit {
+            width: 470px;
+        }
+
+        &__submit {
+            background-color: #fff;
+            color: #fc8f3f;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.stories {
+    text-align: center;
+
+    h1 {
+        margin-top: 70px;
+    }
+
+    span {
+        color: $primary-color;
+    }
+
+    button {
+        margin: 80px 0px;
+        padding: 6px 8px;
+    }
+
+    &__item {
+        border-radius: 4px/3px;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, .15);
+        margin-top: 30px;
+        text-align: left;
+        width: 300px;
+    }
+
+    &--secondary {
+        background-color: #f4f4f4;
+    }
+
+    &__text {
+        padding: 30px 30px 60px 40px;
+    }
+}
+

@@ -1,0 +1,66 @@
+@import "foundation/scss/foundation/components/buttons";
+
+$alt-color: #fff;
+$alt-bg-color: $primary-color;
+
+$button-fade: "color .2s ease-in-out,background-color .2s ease-in-out";
+
+/* begin buttons override */
+.button, input[type="submit"], button {
+  @include button($padding: $button-med, $radius: true, $full-width: false);
+  @include transition(#{$button-fade});
+  &.expand {
+    @include button-size($padding: $button-med, $full-width: true);
+  }
+  font-size: $button-font-med;
+  letter-spacing: normal;
+  &.alt {
+    @include button($padding: $button-tny, $bg: $alt-bg-color, $radius: true, $full-width: true);
+    font-size: $button-font-sml;
+    color: $secondary-color;
+    &:hover, &:focus, &.active {}
+  }
+  &.prefix {
+    padding-top: 0em !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+  &.postfix {
+    padding-top: 0em !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+  }
+  &.success {
+    color: $alt-color !important;
+    &:hover, &:focus, &.active {}
+  }
+  &.medium {
+    @include button-size($padding: $button-med, $full-width: false);
+    &.expand {
+      @include button-size($padding: $button-med, $full-width: true);
+    }
+    font-size: $button-font-med;
+  }
+  &.small {
+    @include button-size($padding: $button-sml, $full-width: false);
+    &.expand {
+      @include button-size($padding: $button-sml, $full-width: true);
+    }
+    font-size: $button-font-sml;
+  }
+  &.large {
+    @include button-size($padding: $button-lrg, $full-width: false);
+    &.expand {
+      @include button-size($padding: $button-lrg, $full-width: true);
+    }
+    font-size: $button-font-lrg;
+  }
+  &:hover, &:focus, &.active {
+    background-color: $secondary-color !important;
+  }
+  &.alert, &.secondary, &.success {
+    &:hover, &:focus, &.active {
+      background-color: $secondary-color !important;
+    }
+  }
+}

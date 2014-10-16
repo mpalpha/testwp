@@ -1,0 +1,37 @@
+/* begin forms override */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="color"],
+input[type="submit"],
+select,
+textarea {
+  @include radius($input-border-radius);
+  &.prefix {
+    text-align: left;
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+  &.postfix {
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+  }
+}
+
+form .row .row {
+  &.collapse {
+    input {
+      @include radius($input-border-radius);
+    }
+  }
+}

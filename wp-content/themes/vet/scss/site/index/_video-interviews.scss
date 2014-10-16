@@ -1,0 +1,10 @@
+.video-interviews {
+	background: url('images/video_interviews.jpg');
+	background-size: cover;
+	height: 700px;
+	width: 100%;
+
+	&__text-container {
+		margin-top: 325px;
+	}
+}

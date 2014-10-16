@@ -1,0 +1,38 @@
+.toggle {
+    font-size: 12px;
+    height: 40px;
+    width: auto;
+    position: relative;
+
+
+    .toggle__list {
+        @include position( absolute, null 50% null null );
+        @include transform( translateX(50%) );
+        @include border-bottom-radius(5px);
+        line-height: 40px;
+        display: table;
+        background: #969696;
+        padding: 0 10px;
+
+        > div {
+            background: #969696;
+            margin: 0;
+            padding: 0 10px;
+            @include inline-block;
+        }
+
+        &__link {
+            color: #666;
+            font-size: 12px;
+            text-transform: uppercase;
+
+            &:hover {
+                color: #fff;
+            }
+
+            &--active {
+                color: #ddd;
+            }
+        }
+    }
+}

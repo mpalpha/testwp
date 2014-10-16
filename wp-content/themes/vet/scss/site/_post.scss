@@ -1,0 +1,28 @@
+.post {
+    background: #fff;
+    margin-bottom: 40px;
+    padding: 50px;
+
+    &__meta {
+        color: #aaa;
+        font-family: 'Trebuchet MS';
+        font-size: 14px;
+    }
+
+    &__content {
+        color: #666;
+        font-family: 'Trebuchet MS';
+        font-size: 16px;
+        padding-top: 25px;
+
+        p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &__next-post {
+        margin-top: 40px;
+        text-align: center;
+    }
+}

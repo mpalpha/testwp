@@ -1,0 +1,46 @@
+// Global config
+@import "fonts/fonts";
+
+// Your fonts
+@import "node-bourbon/assets/stylesheets/bourbon";
+@import "foundation/scss/normalize";
+@import "config/variables";
+
+// Your custom variables
+@import "config/colors";
+
+// Your custom color scheme
+@import "config/settings";
+
+// Default settings file. Uncomment each setting you need to change
+@import "config/foundation";
+
+// Foundation 5 by Zurb
+
+@import "components/colors";
+@import "components/type";
+@import "components/buttons";
+@import "components/input";
+@import "components/dropdown";
+@import "components/dropdown-menu";
+@import "components/bulleted-list";
+@import "components/toggle-list";
+@import "components/search-bar";
+
+// Site structure
+@import "site/header";
+@import "site/structure";
+
+// Your site structure
+@import "site/news-blog";
+
+// Your site structure
+@import "site/post";
+
+// Your site structure
+@import "site/footer";
+
+// Assets
+@import "assets/icons";
+
+// Load Foundation icon fonts
